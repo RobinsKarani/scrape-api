@@ -15,5 +15,5 @@ COPY . .
 #expose port
 EXPOSE 8000
 
-#eun the application
+#run the application
 CMD ["python", "run.py"]
