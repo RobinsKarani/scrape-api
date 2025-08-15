@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  scrapeapi:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=False
+      - CACHE_TTL=300
+    volumes:
+      - ./logs:/app/logs  # If you add logging
+
+  # Optional: Add Redis for better caching
+  # redis:
+  #   image: redis:alpine
+  #   ports:
+  #     - "6379:6379"
